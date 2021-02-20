@@ -922,7 +922,7 @@ def mock_callable_tests(context):
                 getattr(sample_module.Target, self.callable_arg)(
                     *self.call_args, **self.call_kwargs
                 ),
-                "original response",
+                ["original response"],
             )
 
     @context.shared_context
@@ -1245,7 +1245,7 @@ def mock_callable_tests(context):
                     getattr(sample_module.Target(), self.callable_arg)(
                         *self.call_args, **self.call_kwargs
                     ),
-                    "original response",
+                    ["original response"],
                 )
 
         @context.sub_context
